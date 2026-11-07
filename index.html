@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta name="theme-color" content="#101a25">
+  <title>Mini Factory Tycoon — Prototype 0.1</title>
+  <link rel="stylesheet" href="./styles.css">
+  <script src="https://yandex.ru/games/sdk/v2"></script>
+  <script src="https://cdn.jsdelivr.net/npm/phaser@3.90.0/dist/phaser.min.js"></script>
+</head>
+<body>
+  <main id="game-shell">
+    <header class="topbar">
+      <div class="brand">
+        <div class="brand-mark">MF</div>
+        <div>
+          <div class="brand-title">MINI FACTORY</div>
+          <div class="brand-subtitle">TYCOON · ПРОТОТИП 0.1</div>
+        </div>
+      </div>
+      <div class="stats">
+        <div class="stat"><span class="stat-label">ДЕНЬГИ</span><strong id="money">₽ 0</strong></div>
+        <div class="stat"><span class="stat-label">СЫРЬЁ</span><strong id="raw">0 / 3</strong></div>
+        <div class="stat"><span class="stat-label">ГРУЗ</span><strong id="cargo">0 / 3</strong></div>
+      </div>
+      <button id="save-btn" class="small-btn" title="Сохранить игру">Сохранить</button>
+    </header>
+
+    <section class="game-area">
+      <div id="game-container"></div>
+      <div class="hint-panel" id="hint">Подойди к складу сырья и нажми E</div>
+      <div class="toast" id="toast" aria-live="polite"></div>
+      <div class="touch-controls" aria-label="Мобильное управление">
+        <div class="dpad">
+          <button data-dir="up" aria-label="Вверх">▲</button>
+          <div class="dpad-row">
+            <button data-dir="left" aria-label="Влево">◀</button>
+            <button data-dir="down" aria-label="Вниз">▼</button>
+            <button data-dir="right" aria-label="Вправо">▶</button>
+          </div>
+        </div>
+        <button id="touch-action" class="action-touch">E<br><small>ДЕЙСТВИЕ</small></button>
+      </div>
+    </section>
+
+    <footer class="bottombar">
+      <div class="objective"><span class="objective-dot"></span><span id="objective">Задача: произведи и доставь первую коробку</span></div>
+      <div class="footer-actions">
+        <button id="upgrade-btn" class="upgrade-btn">Улучшить станок · ₽100</button>
+        <button id="bonus-btn" class="bonus-btn">Бонус +₽50 · реклама</button>
+      </div>
+    </footer>
+  </main>
+  <script type="module" src="./src/main.js"></script>
+</body>
+</html>
