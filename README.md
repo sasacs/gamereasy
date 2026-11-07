@@ -1,0 +1,2 @@
+# gamereasy
+/game/
